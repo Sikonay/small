@@ -71,38 +71,20 @@
                                     <tbody>
 
                                         ";
+                                        $number=0;
                                         while ($questions=mysqli_fetch_assoc($result_qu)){
                                             //вывод таблицы
-                                            
+                                            $number=$number+1;
+                                            echo "<tr>                                        
+                                            <th scope='row'>".$number."</th>
+                                            <td>".$questions['topic']."</td>
+                                            <td>".$questions['creation']."</td>
+                                            <td>".$questions['answered']."</td>
+                                            </tr>";
+
                                         }
 
-                                   echo"<tr>                                        
-                                        <th scope='row'>1</th>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>@mdo</td>
-                                        </tr>
-
-                                        <tr>
-                                        <th scope='row'>2</th>
-                                        <td>Jacob</td>
-                                        <td>Thornton</td>
-                                        <td>@fat</td>
-                                        </tr>
-
-                                        <tr>
-                                        <th scope='row'>3</th>
-                                        <td>Larry</td>
-                                        <td>the Bird</td>
-                                        <td>@twitter</td>
-                                        </tr>
-
-                                    </tbody>
-                                </table>                              
-
-                                ";
-
-
+                                   echo"</tbody></table>";
                     }else{
                         echo"Манагер есть";
                     }
